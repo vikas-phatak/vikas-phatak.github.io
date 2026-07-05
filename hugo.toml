@@ -1,6 +1,6 @@
 baseURL = "https://vikasp.dev/"
 locale = "en-ie"
-title = "Vikas Phatak — Chief Industrial Architect"
+title = "Vikas Phatak — Senior MES Engineer"
 enableRobotsTXT = true
 
 [pagination]
@@ -12,12 +12,12 @@ enableRobotsTXT = true
 [params]
   # --- Identity -------------------------------------------------------------
   name          = "Vikas Phatak"
-  role          = "Chief Industrial Architect · Senior MES Engineer"
+  role          = "Senior MES & Industrial Automation Engineer"
   tagline       = "I design the systems that turn regulated manufacturing into software you can trust — electronic batch records, GxP-compliant integration, and audit trails that hold up under inspection."
   location      = "Cork, Ireland"
   status        = "RUNNING"
   state         = "VALIDATED"
-  description   = "Vikas Phatak — Chief Industrial Architect and Senior MES Engineer. Electronic batch records, GxP compliance, and IT/OT integration for regulated pharmaceutical manufacturing."
+  description   = "Vikas Phatak — Senior MES Engineer. Electronic batch records, GxP compliance, IT/OT integration, and autonomous AI agent workflows for regulated pharmaceutical manufacturing."
 
   # --- Faceplate readouts (the SCADA-style tag values in the hero) ----------
   [[params.readouts]]
@@ -82,15 +82,11 @@ enableRobotsTXT = true
     url    = "https://github.com/vikas-phatak"
     cta    = "Browse the repos"
 
-  # --- Other channels (separate line of work) -------------------------------
+  # --- Other channels -------------------------------------------------------
   [[params.channels]]
     handle = "@ProcessArchX"
     line   = "MES & regulated manufacturing"
     url    = "https://x.com/ProcessArchX"
-  [[params.channels]]
-    handle = "@ForgeTheWay"
-    line   = "Evidence-based Maratha military history"
-    url    = "https://x.com/ForgeTheWay"
 
   # --- Social / contact -----------------------------------------------------
   [params.social]

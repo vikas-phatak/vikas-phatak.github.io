@@ -1,4 +1,4 @@
 ---
-title: "Vikas Phatak — Chief Industrial Architect"
-description: "Chief Industrial Architect and Senior MES Engineer. Electronic batch records, GxP compliance, and IT/OT integration for regulated pharmaceutical manufacturing."
+title: "Vikas Phatak — Senior MES Engineer"
+description: "Senior MES & Industrial Automation Engineer. Electronic batch records, GxP compliance, IT/OT integration, and autonomous AI agent workflows for regulated pharmaceutical manufacturing."
 ---
