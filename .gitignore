@@ -1,22 +1,66 @@
-# Hugo build output and lock files
+# --- Hugo Build Output & Caches ---
 public/
 resources/
 .hugo_build.lock
+.sass-cache/
 
-# Python virtual environments & cache
+# --- Python Virtual Environments & Packages ---
 .venv/
+venv/
+ENV/
+env/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+# --- Testing, Linting & Coverage ---
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+*.log
 
-# Agent scratch directory
+# --- Agent Workflows, Scratch & Temp Files ---
 scratch/
 *.scratch.*
+.gemini/
+tmp/
+temp/
+proposed-theme-*/
 
-# OS generated files
+# --- Secrets & Environment Variables ---
+.env
+.env.*
+!.env.example
+
+# --- OS & Editor Generated Files ---
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+*.swp
+*~
+*.bak
+.idea/
+*.sublime-workspace
