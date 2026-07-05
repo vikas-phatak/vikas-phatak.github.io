@@ -1,0 +1,104 @@
+{{ define "main" }}
+
+<!-- ============================ HERO / FACEPLATE ======================== -->
+<section class="hero" aria-labelledby="hero-name">
+  <div class="wrap">
+    <p class="hero__tag">ENT&#8209;001 &nbsp;/&nbsp; INDUSTRIAL ARCHITECTURE</p>
+
+    <div class="hero__head">
+      <h1 class="hero__name" id="hero-name">{{ site.Params.name }}</h1>
+      <span class="hero__pill">
+        <span class="led led--run" aria-hidden="true"></span>{{ site.Params.status }}
+      </span>
+    </div>
+
+    <p class="hero__role">{{ site.Params.role }}</p>
+    <p class="hero__tagline">{{ site.Params.tagline }}</p>
+
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="{{ site.Params.social.site }}">Read Validated State</a>
+      <a class="btn" href="{{ site.Params.social.github }}">GitHub</a>
+    </div>
+
+    <!-- Readout strip: SCADA tag faceplate values -->
+    <dl class="readouts" aria-label="Profile readouts">
+      {{ range site.Params.readouts }}
+      <div class="readout">
+        <dt class="readout__tag">{{ .tag }}</dt>
+        <dd class="readout__val">{{ .value }}{{ with .unit }} <span class="readout__unit">{{ . }}</span>{{ end }}</dd>
+        <p class="readout__label">{{ .label }}</p>
+      </div>
+      {{ end }}
+    </dl>
+  </div>
+</section>
+
+<!-- ============================ CAPABILITIES / UNITS ==================== -->
+<section class="band" aria-labelledby="cap-title">
+  <div class="wrap">
+    <div class="band__head">
+      <h2 class="band__title" id="cap-title">What I build</h2>
+      <p class="band__sub">Four units on the line. Each one designed to pass audit, not just pass tests.</p>
+    </div>
+
+    <ul class="units">
+      {{ range site.Params.capabilities }}
+      <li class="unit">
+        <p class="unit__tag"><span class="led led--run led--sm" aria-hidden="true"></span>{{ .tag }}</p>
+        <h3 class="unit__title">{{ .title }}</h3>
+        <p class="unit__body">{{ .body }}</p>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ PROJECTS / HUB ========================== -->
+<section class="band band--alt" aria-labelledby="pub-title">
+  <div class="wrap">
+    <div class="band__head">
+      <h2 class="band__title" id="pub-title">Writing &amp; work</h2>
+      <p class="band__sub">One engine, several exhausts. The thinking, the book, and the code.</p>
+    </div>
+
+    <ul class="cards">
+      {{ range site.Params.projects }}
+      <li class="card">
+        <a class="card__link" href="{{ .url }}">
+          <span class="card__top">
+            <span class="card__tag">{{ .tag }}</span>
+            <span class="card__kind">{{ .kind }}</span>
+          </span>
+          <span class="card__title">{{ .title }}</span>
+          <span class="card__body">{{ .body }}</span>
+          <span class="card__cta">{{ .cta }} <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ CHANNELS ================================ -->
+<section class="band" aria-labelledby="ch-title">
+  <div class="wrap">
+    <div class="band__head">
+      <h2 class="band__title" id="ch-title">Two lines running</h2>
+      <p class="band__sub">Manufacturing systems by day. History research the rest of the time.</p>
+    </div>
+
+    <ul class="channels">
+      {{ range site.Params.channels }}
+      <li class="channel">
+        <a class="channel__link" href="{{ .url }}">
+          <span class="channel__handle">{{ .handle }}</span>
+          <span class="channel__line">{{ .line }}</span>
+          <span class="channel__go" aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+{{ end }}

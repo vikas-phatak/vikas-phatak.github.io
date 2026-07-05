@@ -1,0 +1,27 @@
+<header class="statusbar" role="banner">
+  <div class="statusbar__inner">
+    <a class="statusbar__id" href="{{ "/" | relURL }}">
+      <span class="led led--run" aria-hidden="true"></span>
+      <span class="statusbar__name">{{ site.Params.name }}</span>
+    </a>
+
+    <dl class="statusbar__tags" aria-label="System status">
+      <div class="tag">
+        <dt>SYS</dt>
+        <dd class="tag__val tag__val--run">{{ site.Params.status }}</dd>
+      </div>
+      <div class="tag tag--hide-sm">
+        <dt>STATE</dt>
+        <dd class="tag__val tag__val--ok">{{ site.Params.state }}</dd>
+      </div>
+      <div class="tag tag--hide-sm">
+        <dt>LOC</dt>
+        <dd class="tag__val">{{ site.Params.location }}</dd>
+      </div>
+      <div class="tag">
+        <dt>UTC</dt>
+        <dd class="tag__val" id="clock" data-clock aria-live="off">--:--:--</dd>
+      </div>
+    </dl>
+  </div>
+</header>

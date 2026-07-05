@@ -1,74 +1,99 @@
 baseURL = "https://vikasp.dev/"
-title = "Vikas Phatak | Engineering & AI Blog"
-theme = "PaperMod"
-locale = "en-US"
-defaultContentLanguage = "en"
+locale = "en-ie"
+title = "Vikas Phatak — Chief Industrial Architect"
 enableRobotsTXT = true
-enableInlineShortcodes = true
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-paginate = 10
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+[pagination]
+  pagerSize = 10
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [params]
-  env = "production"
-  title = "Vikas Phatak | Engineering & AI Blog"
-  description = "Technical deep-dives into autonomous agent orchestration, AI systems, and modern software architecture."
-  keywords = ["AI", "Agents", "Python", "Hugo", "LangGraph", "Software Architecture", "DevOps"]
-  author = "Vikas Phatak"
-  defaultTheme = "auto"
-  disableThemeToggle = false
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  comments = false
-  hidemeta = false
-  hideSummary = false
-  showtoc = true
-  tocopen = true
+  # --- Identity -------------------------------------------------------------
+  name          = "Vikas Phatak"
+  role          = "Chief Industrial Architect · Senior MES Engineer"
+  tagline       = "I design the systems that turn regulated manufacturing into software you can trust — electronic batch records, GxP-compliant integration, and audit trails that hold up under inspection."
+  location      = "Cork, Ireland"
+  status        = "RUNNING"
+  state         = "VALIDATED"
+  description   = "Vikas Phatak — Chief Industrial Architect and Senior MES Engineer. Electronic batch records, GxP compliance, and IT/OT integration for regulated pharmaceutical manufacturing."
 
-  [params.label]
-    text = "Vikas Phatak"
-    icon = ""
-    iconHeight = 35
+  # --- Faceplate readouts (the SCADA-style tag values in the hero) ----------
+  [[params.readouts]]
+    tag   = "EXP"
+    label = "Experience"
+    value = "15"
+    unit  = "yr+"
+  [[params.readouts]]
+    tag   = "DOM"
+    label = "Domain"
+    value = "Pharma / GxP"
+    unit  = ""
+  [[params.readouts]]
+    tag   = "STD"
+    label = "Standards"
+    value = "ISA-88/95"
+    unit  = ""
+  [[params.readouts]]
+    tag   = "STK"
+    label = "Core stack"
+    value = ".NET · Python · React · AI Agents"
+    unit  = ""
 
-  [params.profileMode]
-    enabled = false
+  # --- Capabilities (process units) -----------------------------------------
+  [[params.capabilities]]
+    tag   = "U-101"
+    title = "MES & Electronic Batch Records"
+    body  = "Paper-on-glass eBR and digital SOP execution built on ASP.NET Core, SQLite/SQL Server, and Windows Authentication. Review-by-exception, e-signatures, and a hash-chained audit trail at the core."
+  [[params.capabilities]]
+    tag   = "U-102"
+    title = "GxP Compliance by Design"
+    body  = "Systems that meet 21 CFR Part 11, EU GMP Annex 11, and GAMP 5 from the substrate up — not bolted on afterwards. URS, traceability, and validation baked into the build."
+  [[params.capabilities]]
+    tag   = "U-103"
+    title = "IT / OT Integration & AI Agents"
+    body  = "Clean data flow between the plant floor and enterprise: MES to SAP, SCADA, and historians over OPC-UA and MQTT. Autonomous AI agent workflows for engineering and documentation."
+  [[params.capabilities]]
+    tag   = "U-104"
+    title = "Digital Twins & Equipment Models"
+    body  = "ISA-88/95 equipment hierarchies expressed as DTDL v3 models. Reverse-engineered proprietary formats where the vendor left no door open."
 
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/vikas-phatak"
-  [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com/in/vikas-phatak"
-  [[params.socialIcons]]
-    name = "rss"
-    url = "index.xml"
+  # --- Projects / writing (the hub links) -----------------------------------
+  [[params.projects]]
+    tag    = "PUB-01"
+    title  = "Engineering Dispatches"
+    kind   = "Agent-Driven Blog"
+    body   = "Technical deep-dives and field notes on autonomous AI agent orchestration, MES architecture, and industrial systems. Published autonomously by the agent workflow engine."
+    url    = "/posts/"
+    cta    = "Read dispatches"
+  [[params.projects]]
+    tag    = "PUB-02"
+    title  = "Validated State"
+    kind   = "Publication"
+    body   = "Field notes on MES architecture and regulated manufacturing — the design decisions behind systems that pass audit."
+    url    = "https://validatedstate.com"
+    cta    = "Read the publication"
+  [[params.projects]]
+    tag    = "REPO-01"
+    title  = "Open source & Agent Workflows"
+    kind   = "GitHub"
+    body   = "Equipment libraries, DTDL model generators, and the autonomous Python orchestration engine behind this blog. Built in the open."
+    url    = "https://github.com/vikas-phatak"
+    cta    = "Browse the repos"
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-    style = "monokai"
+  # --- Other channels (separate line of work) -------------------------------
+  [[params.channels]]
+    handle = "@ProcessArchX"
+    line   = "MES & regulated manufacturing"
+    url    = "https://x.com/ProcessArchX"
+  [[params.channels]]
+    handle = "@ForgeTheWay"
+    line   = "Evidence-based Maratha military history"
+    url    = "https://x.com/ForgeTheWay"
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
-
-[privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true
+  # --- Social / contact -----------------------------------------------------
+  [params.social]
+    github = "https://github.com/vikas-phatak"
+    x      = "https://x.com/ProcessArchX"
+    site   = "https://validatedstate.com"

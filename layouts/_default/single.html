@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="prose-band">
+  <div class="wrap wrap--narrow">
+    <p class="hero__tag">{{ if and .Weight (gt .Weight 0) }}DOC&#8209;{{ printf "%03d" .Weight }}{{ else }}DISPATCH&#8209;{{ .Date.Format "20060102" }}{{ end }} &nbsp;/&nbsp; {{ with .Params.categories }}{{ index . 0 | upper }}{{ else }}ENGINEERING{{ end }}</p>
+    <h1 class="prose-band__title">{{ .Title }}</h1>
+    
+    <p class="prose-band__meta" style="font-family: var(--mono); color: var(--ink-dim); font-size: 0.85rem;">
+      {{ with .Date }}<span class="led led--run led--sm" aria-hidden="true" style="margin-right: 0.4rem;"></span>{{ .Format "2006.01.02" }}{{ end }}
+      &nbsp;·&nbsp; {{ .ReadingTime }} min read &nbsp;·&nbsp; {{ .WordCount }} words
+      {{ with .Params.author }} &nbsp;·&nbsp; {{ . }}{{ end }}
+    </p>
+
+    {{ with .Params.tags }}
+    <div style="margin-top: 1rem; margin-bottom: 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      {{ range . }}
+      <span style="font-family: var(--mono); font-size: 0.75rem; background: var(--panel); border: 1px solid var(--line); padding: 0.2rem 0.6rem; border-radius: var(--radius); color: var(--ink-dim);">
+        #{{ . }}
+      </span>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    <div style="margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <a href="{{ "/posts/" | relURL }}" class="btn" style="font-family: var(--mono); font-size: 0.8rem;">&larr; Return to Dispatches</a>
+      {{ with .Date }}<span style="font-family: var(--mono); font-size: 0.75rem; color: var(--ink-faint);">LOG TIMESTAMP: {{ .Format "2006-01-02 15:04 UTC" }}</span>{{ end }}
+    </div>
+  </div>
+</article>
+{{ end }}

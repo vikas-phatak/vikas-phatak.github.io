@@ -20,7 +20,7 @@ class SystemConfig(BaseModel):
     repo_owner: str = "vikas-phatak"
     repo_name: str = "vikas-phatak.github.io"
     default_branch: str = "main"
-    hugo_theme: str = "PaperMod"
+    hugo_theme: str = "custom"
     base_url: str = "https://vikasp.dev/"
     
     # Execution timeouts
@@ -39,7 +39,7 @@ class PostFrontmatter(BaseModel):
     author: str = Field(default="Vikas Phatak")
     description: str = Field(..., description="Compelling meta description (120-160 characters)")
     tags: list[str] = Field(default_factory=list, description="List of technical tags")
-    categories: list[str] = Field(default_factory=lambda: ["Engineering"], description="Top-level category")
+    categories: list[str] = Field(default_factory=lambda: ["Industrial Architecture"], description="Top-level category")
     draft: bool = Field(default=True, description="Draft status")
     ShowToc: bool = Field(default=True, description="Enable Table of Contents")
 

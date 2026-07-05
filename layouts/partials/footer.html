@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div class="site-footer__id">
+        <span class="led led--run" aria-hidden="true"></span>
+        <span>{{ site.Params.name }}</span>
+        <span class="site-footer__role">{{ site.Params.role }}</span>
+      </div>
+      <nav class="site-footer__links" aria-label="Elsewhere">
+        <a href="{{ "/posts/" | relURL }}">Dispatches</a>
+        {{ with site.Params.social.site }}<a href="{{ . }}">Validated State</a>{{ end }}
+        {{ with site.Params.social.github }}<a href="{{ . }}">GitHub</a>{{ end }}
+        {{ with site.Params.social.x }}<a href="{{ . }}">X / ProcessArchX</a>{{ end }}
+      </nav>
+    </div>
+    <div class="site-footer__meta">
+      <span>© {{ now.Year }} {{ site.Params.name }}</span>
+      <span class="site-footer__build">STATE: {{ site.Params.state }} · BUILD {{ now.Format "2006.01.02" }}</span>
+    </div>
+  </div>
+</footer>

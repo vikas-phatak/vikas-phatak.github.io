@@ -1,0 +1,35 @@
+{{ define "main" }}
+<section class="prose-band">
+  <div class="wrap wrap--narrow">
+    <p class="hero__tag">IDX&#8209;001 &nbsp;/&nbsp; AGENT WORKFLOW DISPATCHES</p>
+    <h1 class="prose-band__title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    
+    <div style="margin-top: 2.5rem; border-top: 1px solid var(--line);">
+      <ul class="post-list" style="list-style: none; padding: 0; margin: 0;">
+        {{ range .Pages }}
+        <li class="post-list__item" style="border-bottom: 1px solid var(--line-soft); padding: 1.25rem 0; transition: background 0.2s ease;">
+          <a href="{{ .RelPermalink }}" style="text-decoration: none; display: block;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
+              <span class="post-list__title" style="font-family: var(--sans); font-size: 1.15rem; font-weight: 600; color: var(--ink);">{{ .Title }}</span>
+              {{ with .Date }}
+              <span class="post-list__date" style="font-family: var(--mono); font-size: 0.8rem; color: var(--ink-dim);">
+                <span class="led led--run led--sm" aria-hidden="true"></span>{{ .Format "2006.01.02" }}
+              </span>
+              {{ end }}
+            </div>
+            <div style="font-family: var(--sans); font-size: 0.9rem; color: var(--ink-dim); margin-bottom: 0.5rem; line-height: 1.4;">
+              {{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 140 }}{{ end }}
+            </div>
+            <div style="font-family: var(--mono); font-size: 0.75rem; color: var(--ink-faint); display: flex; gap: 1rem;">
+              <span>{{ .ReadingTime }} min read</span>
+              {{ with .Params.categories }}<span>[ {{ index . 0 | upper }} ]</span>{{ end }}
+            </div>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}

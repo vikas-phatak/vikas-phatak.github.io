@@ -1,0 +1,14 @@
+<script>
+  (function () {
+    // Live UTC clock in the status bar — reads like a SCADA runtime timestamp.
+    var el = document.querySelector('[data-clock]');
+    if (!el) return;
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function tick() {
+      var d = new Date();
+      el.textContent = pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds());
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>

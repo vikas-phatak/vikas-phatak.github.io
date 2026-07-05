@@ -10,6 +10,8 @@ from rich.panel import Panel
 from workflow.agents.researcher import ContentResearcher
 from workflow.agents.writer import TechnicalWriter
 from workflow.agents.editor import EditorInChief
+from workflow.agents.verifier import CodeSnippetVerifier
+from workflow.agents.syndicator import SocialSyndicator
 from workflow.git_ops.publisher import GitPublisher
 
 app = typer.Typer(
@@ -88,6 +90,32 @@ def publish(
         console.print(f"[bold red]Publishing failed:[/bold red] {res.errors}")
         raise typer.Exit(1)
     console.print("[bold green]Publishing sequence completed successfully![/bold green]")
+
+@app.command()
+def verify(
+    post_dir: str = typer.Option(..., "--post-dir", "-d", help="Path to the Hugo post bundle directory")
+):
+    """
+    Extract fenced markdown code snippets and execute them in sandboxed uv environments.
+    """
+    console.print(Panel(f"[bold cyan]Running Sandboxed Code Verification on:[/bold cyan] {post_dir}", expand=False))
+    verifier = CodeSnippetVerifier()
+    res = verifier.run(post_dir=post_dir)
+    if not res.success:
+        raise typer.Exit(1)
+
+@app.command()
+def syndicate(
+    post_dir: str = typer.Option(..., "--post-dir", "-d", help="Path to the approved Hugo post bundle directory")
+):
+    """
+    Generate promotional copy for LinkedIn, Twitter/X, and cross-posting developer blogs.
+    """
+    console.print(Panel(f"[bold cyan]Generating Social Syndication Copy for:[/bold cyan] {post_dir}", expand=False))
+    syndicator = SocialSyndicator()
+    res = syndicator.run(post_dir=post_dir)
+    if not res.success:
+        raise typer.Exit(1)
 
 def cli():
     """Entry point for project script."""
