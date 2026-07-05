@@ -1,8 +1,8 @@
 ---
-title: "Welcome to the Autonomous Agent-Driven Engineering Blog"
+title: "Automated Reviewer, Editor and Publisher: Author Writes the Blog on Its Own, Agents Help to Edit, Verify and Publish"
 date: 2026-07-05T23:00:00+00:00
 author: "Vikas Phatak"
-description: "An introduction to the autonomous AI editorial board powering vikas-phatak.github.io using Hugo and Python orchestration."
+description: "Author writes the blog on its own. Agents help to edit, verify and publish using an automated reviewer, editor and publisher workflow."
 tags: ["AI", "Agents", "Hugo", "Python", "Architecture"]
 categories: ["Engineering", "AI Systems"]
 draft: false
