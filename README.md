@@ -45,9 +45,9 @@ uv run blog-workflow --help
   - [x] Create initial page bundle in `content/posts/welcome-to-agentic-blog/`.
   - [x] Set up `.github/workflows/deploy-hugo.yml` with `lychee` link checker.
   - [x] Initialize Python `pyproject.toml` and `uv.lock`.
-- [ ] **Phase 2: Core Orchestration Engine & Existing Skills**
-  - [ ] Build `workflow/orchestrator.py` and CLI commands (`new`, `review`, `publish`).
-  - [ ] Implement `workflow/git_ops/publisher.py`.
+- [x] **Phase 2: Core Orchestration Engine & Existing Skills**
+  - [x] Build `workflow/orchestrator.py` and CLI commands (`new`, `review`, `publish`).
+  - [x] Implement `workflow/git_ops/publisher.py`.
 - [ ] **Phase 3: Custom Hugo & Editorial Skills Development**
   - [ ] Build Antigravity Plugin `.gemini/config/plugins/hugo-blog-workflow/`.
   - [ ] Implement `hugo-content-master` and `blog-seo-auditor` skills.

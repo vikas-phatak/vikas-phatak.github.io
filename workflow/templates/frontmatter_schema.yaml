@@ -1,0 +1,10 @@
+---
+title: "{{ title }}"
+date: "{{ date }}"
+author: "Vikas Phatak"
+description: "{{ description }}"
+tags: [{{ tags }}]
+categories: [{{ categories }}]
+draft: true
+ShowToc: true
+---
