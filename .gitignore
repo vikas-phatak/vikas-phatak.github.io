@@ -45,6 +45,7 @@ scratch/
 tmp/
 temp/
 proposed-theme-*/
+vikas-phatak-personal-blog-wf-proposal.md
 
 # --- Secrets & Environment Variables ---
 .env
