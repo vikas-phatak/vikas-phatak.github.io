@@ -6,7 +6,7 @@
 
 ## 🌟 Overview
 
-This repository hosts both the live Hugo static dev blog (`vikas-phatak.github.io`) and the backend **Autonomous Multi-Agent Editorial Board** described in [`vikas-phatak-personal-blog-wf-proposal.md`](file:///D:/Projects/vikas-phatak.github.io/vikas-phatak-personal-blog-wf-proposal.md).
+This repository hosts both the live Hugo static dev blog (`vikasp.dev`) and the backend **Autonomous Multi-Agent Editorial Board** described in [`vikas-phatak-personal-blog-wf-proposal.md`](file:///D:/Projects/vikas-phatak.github.io/vikas-phatak-personal-blog-wf-proposal.md).
 
 ## 🛠️ Architecture & Core Components
 
