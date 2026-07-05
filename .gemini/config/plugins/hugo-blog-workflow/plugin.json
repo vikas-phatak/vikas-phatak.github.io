@@ -1,0 +1,16 @@
+{
+  "name": "hugo-blog-workflow",
+  "version": "1.0.0",
+  "description": "Autonomous Agent-Driven Editorial Board & Hugo Workflow Management System for vikasp.dev",
+  "author": "vikas-phatak",
+  "skills": [
+    "hugo-content-master",
+    "blog-seo-auditor",
+    "code-snippet-verifier",
+    "social-syndication"
+  ],
+  "agents": [
+    "blog-editor-in-chief",
+    "hugo-publisher"
+  ]
+}

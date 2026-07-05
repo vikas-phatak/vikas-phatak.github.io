@@ -48,9 +48,9 @@ uv run blog-workflow --help
 - [x] **Phase 2: Core Orchestration Engine & Existing Skills**
   - [x] Build `workflow/orchestrator.py` and CLI commands (`new`, `review`, `publish`).
   - [x] Implement `workflow/git_ops/publisher.py`.
-- [ ] **Phase 3: Custom Hugo & Editorial Skills Development**
-  - [ ] Build Antigravity Plugin `.gemini/config/plugins/hugo-blog-workflow/`.
-  - [ ] Implement `hugo-content-master` and `blog-seo-auditor` skills.
+- [x] **Phase 3: Custom Hugo & Editorial Skills Development**
+  - [x] Build Antigravity Plugin `.gemini/config/plugins/hugo-blog-workflow/`.
+  - [x] Implement `hugo-content-master` and `blog-seo-auditor` skills.
 - [ ] **Phase 4: Advanced Code Verification & Social Syndication**
   - [ ] Implement `workflow/agents/verifier.py` using `uv run --isolated` with inline PEP 723 dependencies.
   - [ ] Add GitHub PR Review Feedback Loop webhook.
