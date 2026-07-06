@@ -38,6 +38,9 @@ share/python-wheels/
 htmlcov/
 *.log
 
+# --- Local Documentation & Guides ---
+docs/
+
 # --- Agent Workflows, Scratch & Temp Files ---
 scratch/
 *.scratch.*
