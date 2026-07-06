@@ -57,7 +57,7 @@ enableRobotsTXT = true
   [[params.capabilities]]
     tag   = "U-104"
     title = "ISA-88/95 Equipment Modeling & AI Workflows"
-    body  = "Structuring plant hierarchies and batch control models to ISA-88/95 and PackML standards. Leveraging automated AI agent workflows to streamline engineering documentation, test case generation, and audit log verification."
+    body  = "Structuring plant hierarchies and batch control models to ISA-88/95 standards. Leveraging automated AI agent workflows to streamline engineering documentation, test case generation, and audit log verification."
 
   # --- Projects / writing (the hub links) -----------------------------------
   [[params.projects]]
