@@ -44,20 +44,20 @@ enableRobotsTXT = true
   # --- Capabilities (process units) -----------------------------------------
   [[params.capabilities]]
     tag   = "U-101"
-    title = "MES & Electronic Batch Records"
-    body  = "Paper-on-glass eBR and digital SOP execution built on ASP.NET Core, SQLite/SQL Server, and Windows Authentication. Review-by-exception, e-signatures, and a hash-chained audit trail at the core."
+    title = "MES & Electronic Batch Records (eBR)"
+    body  = "Architecting and configuring enterprise eBR and digital recipe workflows across regulated pharmaceutical lines. Implementing review-by-exception, automated parameter verification, and 21 CFR Part 11 compliant electronic signatures."
   [[params.capabilities]]
     tag   = "U-102"
-    title = "GxP Compliance by Design"
-    body  = "Systems that meet 21 CFR Part 11, EU GMP Annex 11, and GAMP 5 from the substrate up — not bolted on afterwards. URS, traceability, and validation baked into the build."
+    title = "GxP Compliance & Computer Systems Validation"
+    body  = "Delivering systems aligned with GAMP 5 principles, EU GMP Annex 11, and 21 CFR Part 11 from the substrate up. Leading risk-based Computer Software Assurance (CSA), URS/FRS design, and end-to-end traceability."
   [[params.capabilities]]
     tag   = "U-103"
-    title = "IT / OT Integration & AI Agents"
-    body  = "Clean data flow between the plant floor and enterprise: MES to SAP, SCADA, and historians over OPC-UA and MQTT. Autonomous AI agent workflows for engineering and documentation."
+    title = "Shop Floor IT/OT & Automation Integration"
+    body  = "Bridging Level 2 control systems (PLCs, SCADA, DCS) with Level 3 MES and Level 4 SAP ERP. Building resilient OPC-UA, MQTT, and RESTful data pipelines for real-time batch historian tracking and material flow."
   [[params.capabilities]]
     tag   = "U-104"
-    title = "Digital Twins & Equipment Models"
-    body  = "ISA-88/95 equipment hierarchies expressed as DTDL v3 models. Reverse-engineered proprietary formats where the vendor left no door open."
+    title = "ISA-88/95 Equipment Modeling & AI Workflows"
+    body  = "Structuring plant hierarchies and batch control models to ISA-88/95 and PackML standards. Leveraging automated AI agent workflows to streamline engineering documentation, test case generation, and audit log verification."
 
   # --- Projects / writing (the hub links) -----------------------------------
   [[params.projects]]
