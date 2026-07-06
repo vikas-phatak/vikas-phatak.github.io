@@ -13,7 +13,7 @@ enableRobotsTXT = true
   # --- Identity -------------------------------------------------------------
   name          = "Vikas Phatak"
   role          = "Senior MES & Industrial Automation Engineer"
-  tagline       = "I design the systems that turn regulated manufacturing into software you can trust — electronic batch records, GxP-compliant integration, and audit trails that hold up under inspection."
+  tagline       = "I design enterprise automation systems that turn regulated pharmaceutical manufacturing into software you can trust, delivering electronic batch records, GxP compliance, and audit trails built to withstand rigorous inspection."
   location      = "Terminal-001"
   status        = "RUNNING"
   state         = "VALIDATED"

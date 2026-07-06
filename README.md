@@ -42,7 +42,7 @@ uv run blog-workflow --help
 
 - [x] **Phase 1: Repository & Hugo Bootstrap**
   - [x] Configure `hugo.toml` with PaperMod theme and SEO defaults.
-  - [x] Create initial page bundle in `content/posts/welcome-to-agentic-blog/`.
+  - [x] Create initial page bundle in `content/posts/welcome-to-engineering-dispatches/`.
   - [x] Set up `.github/workflows/deploy-hugo.yml` with `lychee` link checker.
   - [x] Initialize Python `pyproject.toml` and `uv.lock`.
 - [x] **Phase 2: Core Orchestration Engine & Existing Skills**
